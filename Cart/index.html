@@ -160,10 +160,6 @@
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-200 py-2">
-                <div class="container mx-auto px-4 flex justify-start space-x-8">
-                </div>
-            </div>
         </header>
 
 <script>
@@ -221,9 +217,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             </thead>
                             <tbody>
                                 <!-- Cart Item 1 -->
-                                <tr class="border-b border-gray-100">
+                                <tr class="border-b border-gray-100 cart-row">
                                     <td class="px-4 py-4 flex items-center">
-                                        <button class="text-red-500 hover:text-red-700 mr-4"><i class="fas fa-times-circle"></i></button>
+                                        <button class="text-red-500 hover:text-red-700 mr-4 cart-remove-btn"><i class="fas fa-times-circle"></i></button>
                                         <img src="https://via.placeholder.com/50x50?text=Product" alt="Modern Style Barong" class="w-16 h-16 object-cover rounded-md mr-4">
                                         <span class="font-medium text-gray-800">Modern Style Barong</span>
                                     </td>
@@ -234,9 +230,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <td class="px-4 py-4 text-gray-700">₱999</td>
                                 </tr>
                                 <!-- Cart Item 2 -->
-                                <tr class="border-b border-gray-100">
+                                <tr class="border-b border-gray-100 cart-row">
                                     <td class="px-4 py-4 flex items-center">
-                                        <button class="text-red-500 hover:text-red-700 mr-4"><i class="fas fa-times-circle"></i></button>
+                                        <button class="text-red-500 hover:text-red-700 mr-4 cart-remove-btn"><i class="fas fa-times-circle"></i></button>
                                         <img src="https://via.placeholder.com/50x50?text=Product" alt="Embroidered Alampay" class="w-16 h-16 object-cover rounded-md mr-4">
                                         <span class="font-medium text-gray-800">Embroidered Alampay</span>
                                     </td>
@@ -339,5 +335,56 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+</script>
+
+<!-- Modal for delete confirmation -->
+<div id="cart-delete-modal" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-80 text-center">
+        <h3 class="text-lg font-bold mb-4 text-gray-800">Warning</h3>
+        <p class="mb-6 text-gray-700">Do you want to delete this product?</p>
+        <div class="flex justify-center gap-4">
+            <button id="cart-modal-yes" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 font-semibold">Yes</button>
+            <button id="cart-modal-no" class="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 font-semibold">No</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Cart remove button logic
+document.addEventListener('DOMContentLoaded', function() {
+    let modal = document.getElementById('cart-delete-modal');
+    let yesBtn = document.getElementById('cart-modal-yes');
+    let noBtn = document.getElementById('cart-modal-no');
+    let rowToDelete = null;
+
+    document.querySelectorAll('.cart-remove-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            rowToDelete = btn.closest('.cart-row');
+            modal.classList.remove('hidden');
+        });
+    });
+
+    yesBtn.addEventListener('click', function() {
+        if (rowToDelete) {
+            rowToDelete.remove();
+            rowToDelete = null;
+        }
+        modal.classList.add('hidden');
+    });
+
+    noBtn.addEventListener('click', function() {
+        rowToDelete = null;
+        modal.classList.add('hidden');
+    });
+
+    // Optional: close modal when clicking outside
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+            rowToDelete = null;
+        }
+    });
+});
 </script>
 </html>

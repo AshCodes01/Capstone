@@ -79,7 +79,7 @@
         <main class="flex-grow container mx-auto px-4 py-8">
             <!-- Breadcrumbs -->
             <div class="text-sm breadcrumbs mb-6 text-gray-600">
-                <a href="../Account/index.html" class="hover:underline">Account</a>
+                <a href="../Homepagewithaccount/index.html" class="hover:underline">home</a>
                 <span class="mx-2">/</span>
                 <span>Womens Barong</span>
                 <span class="mx-2">/</span>
@@ -141,7 +141,7 @@
                         <a href="../CheckOutRental/Index.Html" class="ml-6 bg-red-500 text-white px-4 py-2 rounded text-sm flex items-center justify-center">Rent Now</a>
                     </div>
 
-                    <a href="../CheckOut/index.html" class="mt-4 bg-red-600 text-white px-6 py-2 rounded flex items-center justify-center">Buy Now</a>
+                    <a href="../Cart/index.html" class="mt-4 bg-red-600 text-white px-6 py-2 rounded flex items-center justify-center">Add to Cart</a>
 
                     <script>
                     // Colour selection
@@ -193,44 +193,195 @@
                     <h2 class="text-lg font-bold text-gray-800">Related Item</h2>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden relative">
-                        <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-35%</div>
-                        <img src="https://via.placeholder.com/200x200?text=A" class="w-full h-40 object-cover" alt="A">
-                        <div class="p-3 text-sm">
-                            <div class="font-medium">Modern Style Barong</div>
-                            <div class="text-red-500 font-bold">₱???</div>
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full group">
+                        <div class="relative bg-white flex flex-col items-center pt-4 pb-2" style="min-height: 220px;">
+                            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-40%</span>
+                            <div class="absolute top-2 right-2 flex flex-col gap-2">
+                                <a href="../Wishlist/index.html" title="Add to Wishlist" class="bg-white rounded-full p-1 shadow hover:bg-red-100 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-heart text-red-500 text-lg"></i>
+                                </a>
+                                <button title="View Details" class="bg-white rounded-full p-1 shadow hover:bg-gray-200 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-eye text-gray-700 text-lg"></i>
+                                </button>
+                            </div>
+                            <img src="https://via.placeholder.com/200x250" alt="Lady Barong With Ethnic Sleeves" class="w-full h-40 object-contain mb-2">
+                            <!-- Add To Cart button hidden by default, shown on hover, always clickable -->
+                            <a
+                                href="index.html"
+                                class="block w-full bg-black text-white rounded-md py-2 text-center font-semibold text-base hover:bg-gray-800 transition shadow mt-2 opacity-0 group-hover:opacity-100 duration-200 z-10"
+                                style="pointer-events:auto;">
+                                Add To Cart
+                            </a>
+                        </div>
+                        <div class="px-4 pb-4 pt-2">
+                            <h3 class="font-semibold text-base text-gray-800 mb-1">Lady Barong With Ethnic Sleeves</h3>
+                            <div class="flex items-center mb-1">
+                                <span class="text-red-600 font-bold text-base mr-2">₱1000</span>
+                                <span class="text-gray-400 line-through text-base mr-2">₱1600</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-500 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-gray-600 text-xs ml-2">(88)</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden relative">
-                        <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-37%</div>
-                        <img src="https://via.placeholder.com/200x200?text=B" class="w-full h-40 object-cover" alt="B">
-                        <div class="p-3 text-sm">
-                            <div class="font-medium">Contemporary Style Barong</div>
-                            <div class="text-red-500 font-bold">₱???</div>
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full group">
+                        <div class="relative bg-white flex flex-col items-center pt-4 pb-2" style="min-height: 220px;">
+                            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-40%</span>
+                            <div class="absolute top-2 right-2 flex flex-col gap-2">
+                                <a href="../Wishlist/index.html" title="Add to Wishlist" class="bg-white rounded-full p-1 shadow hover:bg-red-100 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-heart text-red-500 text-lg"></i>
+                                </a>
+                                <button title="View Details" class="bg-white rounded-full p-1 shadow hover:bg-gray-200 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-eye text-gray-700 text-lg"></i>
+                                </button>
+                            </div>
+                            <img src="https://via.placeholder.com/200x250" alt="Contemporary Style Barong" class="w-full h-40 object-contain mb-2">
+                            <a
+                                href="index.html"
+                                class="block w-full bg-black text-white rounded-md py-2 text-center font-semibold text-base hover:bg-gray-800 transition shadow mt-2 opacity-0 group-hover:opacity-100 duration-200 z-10"
+                                style="pointer-events:auto;">
+                                Add To Cart
+                            </a>
+                        </div>
+                        <div class="px-4 pb-4 pt-2">
+                            <h3 class="font-semibold text-base text-gray-800 mb-1">Contemporary Style Barong</h3>
+                            <div class="flex items-center mb-1">
+                                <span class="text-red-600 font-bold text-base mr-2">₱1000</span>
+                                <span class="text-gray-400 line-through text-base mr-2">₱1600</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-500 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-gray-600 text-xs ml-2">(96)</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden relative">
-                        <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-25%</div>
-                        <img src="https://via.placeholder.com/200x200?text=C" class="w-full h-40 object-cover" alt="C">
-                        <div class="p-3 text-sm">
-                            <div class="font-medium">Lady Barong with Ethnic Sleeves</div>
-                            <div class="text-red-500 font-bold">₱???</div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full group">
+                        <div class="relative bg-white flex flex-col items-center pt-4 pb-2" style="min-height: 220px;">
+                            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-40%</span>
+                            <div class="absolute top-2 right-2 flex flex-col gap-2">
+                                <a href="../Wishlist/index.html" title="Add to Wishlist" class="bg-white rounded-full p-1 shadow hover:bg-red-100 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-heart text-red-500 text-lg"></i>
+                                </a>
+                                <button title="View Details" class="bg-white rounded-full p-1 shadow hover:bg-gray-200 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-eye text-gray-700 text-lg"></i>
+                                </button>
+                            </div>
+                            <img src="https://via.placeholder.com/200x250" alt="Modern Style Barong" class="w-full h-40 object-contain mb-2">
+                            <a
+                                href="index.html"
+                                class="block w-full bg-black text-white rounded-md py-2 text-center font-semibold text-base hover:bg-gray-800 transition shadow mt-2 opacity-0 group-hover:opacity-100 duration-200 z-10"
+                                style="pointer-events:auto;">
+                                Add To Cart
+                            </a>
+                        </div>
+                        <div class="px-4 pb-4 pt-2">
+                            <h3 class="font-semibold text-base text-gray-800 mb-1">Modern Style Barong</h3>
+                            <div class="flex items-center mb-1">
+                                <span class="text-red-600 font-bold text-base mr-2">₱1000</span>
+                                <span class="text-gray-400 line-through text-base mr-2">₱1600</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-500 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-gray-600 text-xs ml-2">(86)</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden relative">
-                        <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-20%</div>
-                        <img src="https://via.placeholder.com/200x200?text=D" class="w-full h-40 object-cover" alt="D">
-                        <div class="p-3 text-sm">
-                            <div class="font-medium">Embroidered Alampay</div>
-                            <div class="text-red-500 font-bold">₱???</div>
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full group">
+                        <div class="relative bg-white flex flex-col items-center pt-4 pb-2" style="min-height: 220px;">
+                            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-40%</span>
+                            <div class="absolute top-2 right-2 flex flex-col gap-2">
+                                <a href="../Wishlist/index.html" title="Add to Wishlist" class="bg-white rounded-full p-1 shadow hover:bg-red-100 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-heart text-red-500 text-lg"></i>
+                                </a>
+                                <button title="View Details" class="bg-white rounded-full p-1 shadow hover:bg-gray-200 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-eye text-gray-700 text-lg"></i>
+                                </button>
+                            </div>
+                            <img src="https://via.placeholder.com/200x250" alt="Embroidered Kimono" class="w-full h-40 object-contain mb-2">
+                            <a
+                                href="index.html"
+                                class="block w-full bg-black text-white rounded-md py-2 text-center font-semibold text-base hover:bg-gray-800 transition shadow mt-2 opacity-0 group-hover:opacity-100 duration-200 z-10"
+                                style="pointer-events:auto;">
+                                Add To Cart
+                            </a>
+                        </div>
+                        <div class="px-4 pb-4 pt-2">
+                            <h3 class="font-semibold text-base text-gray-800 mb-1">Embroidered Kimono</h3>
+                            <div class="flex items-center mb-1">
+                                <span class="text-red-600 font-bold text-base mr-2">₱1000</span>
+                                <span class="text-gray-400 line-through text-base mr-2">₱1600</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-500 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-gray-600 text-xs ml-2">(40)</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden relative">
-                        <div class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-22%</div>
-                        <img src="https://via.placeholder.com/200x200?text=E" class="w-full h-40 object-cover" alt="E">
-                        <div class="p-3 text-sm">
-                            <div class="font-medium">Modern Style Barong</div>
-                            <div class="text-red-500 font-bold">₱???</div>
+                    <!-- Card 5 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full group">
+                        <div class="relative bg-white flex flex-col items-center pt-4 pb-2" style="min-height: 220px;">
+                            <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">-40%</span>
+                            <div class="absolute top-2 right-2 flex flex-col gap-2">
+                                <a href="../Wishlist/index.html" title="Add to Wishlist" class="bg-white rounded-full p-1 shadow hover:bg-red-100 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-heart text-red-500 text-lg"></i>
+                                </a>
+                                <button title="View Details" class="bg-white rounded-full p-1 shadow hover:bg-gray-200 transition flex items-center justify-center" style="width: 36px; height: 36px;">
+                                    <i class="far fa-eye text-gray-700 text-lg"></i>
+                                </button>
+                            </div>
+                            <img src="https://via.placeholder.com/200x250" alt="Modern Style Barong" class="w-full h-40 object-contain mb-2">
+                            <a
+                                href="index.html"
+                                class="block w-full bg-black text-white rounded-md py-2 text-center font-semibold text-base hover:bg-gray-800 transition shadow mt-2 opacity-0 group-hover:opacity-100 duration-200 z-10"
+                                style="pointer-events:auto;">
+                                Add To Cart
+                            </a>
+                        </div>
+                        <div class="px-4 pb-4 pt-2">
+                            <h3 class="font-semibold text-base text-gray-800 mb-1">Modern Style Barong</h3>
+                            <div class="flex items-center mb-1">
+                                <span class="text-red-600 font-bold text-base mr-2">₱1000</span>
+                                <span class="text-gray-400 line-through text-base mr-2">₱1600</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex text-yellow-500 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="text-gray-600 text-xs ml-2">(96)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
